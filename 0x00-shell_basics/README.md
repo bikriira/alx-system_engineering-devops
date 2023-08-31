@@ -1,4 +1,4 @@
-![152332967-sea-shell-snail-looking-conch-hand-drawn-sketch-style-illustration-best-for-summer-and-beach-transformed-transformed](https://github.com/bikriira/alx-system_engineering-devops/assets/106757617/b61d0ab4-2d47-4431-a10c-9b0972abb3ba)
+![152332967-sea-shell-snail-looking-conch-hand-drawn-sketch-style-illustration-best-for-summer-and-beach-transformed-transformed](https://github.com/bikriira/alx-system_engineering-devops/assets/106757617/d7111699-ea10-47cd-8c62-9df53c13ccff)
 
 #This is 0x00. Shell, basics
 
