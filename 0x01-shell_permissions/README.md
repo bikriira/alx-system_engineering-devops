@@ -1,4 +1,4 @@
-#What to expectin this directory
+# What to expect in this directory
 
 What do the commands chmod, sudo, su, chown, chgrp do
 Linux file permissions
