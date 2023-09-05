@@ -1,0 +1,10 @@
+total 32
+-rwxr-xr-x 1 root root 31 Sep  4 17:41 0-hello_world
+-rwxr-xr-x 1 root root 28 Sep  4 17:16 1-confused_smiley
+-rwxr--r-- 1 root root 28 Sep  4 17:43 2-hellofile
+-rwxr--r-- 1 root root 39 Sep  4 17:49 3-twofiles
+-rwxr--r-- 1 root root 35 Sep  4 17:51 4-lastlines
+-rwxr--r-- 1 root root 35 Sep  4 17:52 5-firstlines
+-rwxr--r-- 1 root root 46 Sep  4 17:56 6-third_line
+-rw-r--r-- 1 root root  0 Sep  4 17:59 checkfile.txt
+-rwxr-xr-x 1 root root 43 Sep  4 17:09 README.md
