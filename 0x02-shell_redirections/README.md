@@ -2,12 +2,15 @@
 
 Project done during **Full Stack Software Engineering studies** at **Alx**. It aims to learn about how to handle standard input and output and how to combine commands and filters with redirections in **Shell**.
 
-## Technologies
-* Scripts written in Bash 4.3.11(1)
-* Tested on Ubuntu 14.04 LTS
+## Technologies Used
 
-## Languages
-All of the following files are bash scripts:
+| Scripts written in Bash 4.3.11(1) | Tested on Ubuntu 14.04 LTS |
+| --- | --- |
+| ![Ubuntu gif image](https://svg-files.pixelied.com/01f2db2f-8680-4fca-ad72-dbed440efc36/thumb-256px.png) | ![Ubuntu gif image](https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/2X/9/9432530fade5b77702fe5b069b77f4f6ad4754b9.png) |
+
+***
+> **Languages:** \" *All of the following files are bash scripts.* \"
+***
 
 | Filename | Description |
 | -------- | ----------- |
