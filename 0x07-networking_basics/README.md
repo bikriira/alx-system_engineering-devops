@@ -120,4 +120,4 @@ pings an IP address passed as an argument.
 ---
 
 ## Author
-* **Iradufasha Bikri** - @[bikriira](https://github.com/bikriira)
+**Iradufasha Bikri** - @[bikriira](https://github.com/bikriira)
