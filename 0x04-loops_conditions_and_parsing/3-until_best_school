@@ -2,7 +2,7 @@
 #Displays Best School 10 times (using while)
 
 i=1
-until (( i >` 10 )); do
+until (( i > 10 )); do
 	echo "Best School"
 	(( i++ ))
 done
