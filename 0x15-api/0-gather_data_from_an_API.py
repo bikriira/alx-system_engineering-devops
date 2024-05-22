@@ -4,8 +4,8 @@ script that, using jsonplaceholder API, for a given employee ID,
 returns information about his/her Todo list progress
 """
 if __name__ == "__main__":
-    from sys import argv
     import requests
+    from sys import argv
 
     todo_list = requests.get("https://jsonplaceholder.typicode.com/todos/")
     user_api_url = f"https://jsonplaceholder.typicode.com/users/{argv[1]}"
@@ -21,6 +21,6 @@ if __name__ == "__main__":
                 task_count += 1
 
         print(f"Employee {user.json()['name']} is done with",
-              f"tasks({len(completed_tasks)}/{task_count})")
+              f"tasks({len(completed_tasks)}/{task_count}):")
         for task in completed_tasks:
-            print(f"     {task}")
+            print(f"\t {task}")
