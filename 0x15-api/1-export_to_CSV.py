@@ -25,7 +25,7 @@ if __name__ == "__main__":
                     ]
                 )
 
-        with open("USER_ID.csv", "w") as file:
+        with open(f"{argv[1]}.csv", "w") as file:
             writer = csv.writer(file, quoting=csv.QUOTE_ALL)
             for record in records:
                 writer.writerow(record)
