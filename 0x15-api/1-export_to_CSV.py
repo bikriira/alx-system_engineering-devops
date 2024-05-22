@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 records.append(
                     [
                         task["userId"],
-                        user.json()["name"],
+                        user.json()["username"],
                         task["completed"],
                         task["title"]
                     ]
