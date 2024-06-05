@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
     Return the number of subscribers for a given subreddit.
     If the subreddit is invalid, return 0.
     """
-    headers = {'User-Agent': 'reddit-app/0.0.1'}
+    headers = {'User-Agent': 'reddit-app/0.1'}  # Updated User-Agent
     response = requests.get(
         f"https://www.reddit.com/r/{subreddit}/about.json",
         headers=headers,
@@ -22,14 +22,8 @@ def number_of_subscribers(subreddit):
 
     if response.status_code == 200:
         data = response.json()
+        print("OK")  # Print "OK" on success
         return data["data"]["subscribers"]
     else:
+        print("Subreddit not found")  # Print message for invalid subreddit
         return 0
-
-
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) == 2:
-        print(number_of_subscribers(sys.argv[1]))
-    else:
-        print("Usage: ./script_name.py subreddit_name")
