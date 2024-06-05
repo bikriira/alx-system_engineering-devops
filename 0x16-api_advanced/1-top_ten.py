@@ -3,13 +3,13 @@
 queries the Reddit API and prints the titles of the first 10 hot posts
 listed for a given subreddit.
 """
+import requests
 
 
 def top_ten(subreddit):
     """
     Return top 10 posts of a given subreddit
     """
-    import requests
 
     headers = {'User-Agent': 'reddit-app/0.0.1'}
     params = {'limit': 10}
