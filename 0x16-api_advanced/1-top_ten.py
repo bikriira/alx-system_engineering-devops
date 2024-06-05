@@ -12,7 +12,7 @@ def top_ten(subreddit):
     import requests
 
     headers = {'User-Agent': 'reddit-app/0.0.1'}
-    params = {'limit': 9}
+    params = {'limit': 10}
     response = requests.get(
         f"https://www.reddit.com/r/{subreddit}/hot.json",
         headers=headers,
