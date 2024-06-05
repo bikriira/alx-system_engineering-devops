@@ -23,7 +23,7 @@ def top_ten(subreddit):
         all_data = response.json()
         wanted_data = all_data["data"]["children"]
         for data in wanted_data:
-            if not data.get("data").get("stickied") or data["data"].get("pinned"):
+            if not data.get("data").get("stickied"):
                 print(data.get("data").get("title"))
     else:
         print("None")
