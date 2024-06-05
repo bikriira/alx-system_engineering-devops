@@ -19,13 +19,11 @@ def top_ten(subreddit):
         params=params,
         allow_redirects=False
     )
-    try:
-        if response.status_code == 200:
-            all_data = response.json()
-            wanted_data = all_data["data"]["children"]
-            for data in wanted_data:
+    if response.status_code == 200:
+        all_data = response.json()
+        wanted_data = all_data["data"]["children"]
+        for i, data in enumerate(wanted_data):
+            if i < 10:  # Limit to the first 10 posts
                 print(data["data"]["title"])
-        else:
-            print("None")
-    except Exception:
+    else:
         print("None")
