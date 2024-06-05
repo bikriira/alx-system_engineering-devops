@@ -24,6 +24,6 @@ def top_ten(subreddit):
         wanted_data = all_data["data"]["children"]
         for i, data in enumerate(wanted_data):
             if i < 10:  # Limit to the first 10 posts
-                print(data["data"]["title"])
+                print(data.get("data").get("title"))
     else:
         print("None")
