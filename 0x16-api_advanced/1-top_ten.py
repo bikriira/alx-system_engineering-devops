@@ -1,18 +1,13 @@
 #!/usr/bin/python3
 """
-Find the number of subscribers (not active users, total subscribers)
-for a given subreddit.
-If an invalid subreddit is given, the function should return 0.
+queries the Reddit API and prints the titles of the first 10 hot posts
+listed for a given subreddit.
 """
-
-
-from pprint import pprint
 
 
 def recurse(subreddit):
     """
-    Return the number of subscribers for a given subreddit.
-    If the subreddit is invalid, return 0.
+    Return top 10 posts of a given subreddit
     """
     import requests
 
