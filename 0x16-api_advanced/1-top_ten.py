@@ -5,7 +5,7 @@ listed for a given subreddit.
 """
 
 
-def recurse(subreddit):
+def top_ten(subreddit):
     """
     Return top 10 posts of a given subreddit
     """
@@ -21,8 +21,6 @@ def recurse(subreddit):
     if response.status_code == 200:
         data = response.json()
         for count in range(0, 10):
-            hot_list.append(data["data"]["children"][count]["data"]["title"])
-        return hot_list
-
+            print(data["data"]["children"][count]["data"]["title"])
     else:
         return None
