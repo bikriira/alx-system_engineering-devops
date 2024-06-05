@@ -12,7 +12,7 @@ def top_ten(subreddit):
     import requests
 
     headers = {'User-Agent': 'reddit-app/0.0.1'}
-    params = {'limit': 10}
+    params = {'limit': 9}
     response = requests.get(
         f"https://www.reddit.com/r/{subreddit}/hot.json",
         headers=headers,
@@ -21,7 +21,8 @@ def top_ten(subreddit):
     )
     if response.status_code == 200:
         data = response.json()
-        for count in range(0, 10):
+        max_iteration = len(data["data"]["children"])
+        for count in range(0, max_iteration):
             print(data["data"]["children"][count]["data"]["title"])
     else:
         print("None")
