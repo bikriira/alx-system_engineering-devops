@@ -22,11 +22,10 @@ def top_ten(subreddit):
         params=params,
         allow_redirects=False
     )
-
     if response.status_code == 200:
         data = response.json()
         pprint(data)
         for count in range(0, 10):
             print(data["data"]["children"][count]["data"]["title"])
     else:
-        return None
+        print("None")
