@@ -5,9 +5,6 @@ listed for a given subreddit.
 """
 
 
-from pprint import pprint
-
-
 def top_ten(subreddit):
     """
     Return top 10 posts of a given subreddit
@@ -24,7 +21,6 @@ def top_ten(subreddit):
     )
     if response.status_code == 200:
         data = response.json()
-        pprint(data)
         for count in range(0, 10):
             print(data["data"]["children"][count]["data"]["title"])
     else:
