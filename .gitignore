@@ -1,0 +1,9 @@
+*.svg
+learn.py
+__pycache__
+*.pyc
+*.csv
+*.json
+learn/
+nohup.out
+*main.py
