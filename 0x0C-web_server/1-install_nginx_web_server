@@ -10,7 +10,7 @@ sudo apt install nginx -y
 sudo ufw allow 'Nginx HTTP'
 
 # Change the content of the default page
-echo 'Hello World!                 ' | sudo tee /var/www/html/index.nginx-debian.html >/dev/null
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html >/dev/null
 
 # Restart Nginx using service command (not systemctl)
 sudo service nginx restart
