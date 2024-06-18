@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-# A script to install nginx to a server and set it up to have
-# 'hello world' as its default file, When querying Nginx at its root /
+# A script to install nginx on a server and set it up to display 'Hello World'
+# at its root when queried with a GET request.
 
-# Install nginx
+# Update package lists and install nginx
 sudo apt update
 sudo apt install nginx -y
 
-#Allow nginx trafiv
-ufw allow 'Nginx HTTP'
+# Allow Nginx HTTP traffic through the firewall
+sudo ufw allow 'Nginx HTTP'
 
-# Change the content of default page
-echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html null >/dev/null
+# Change the content of the default page
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
 
-# Start nginx
-sudo service nginx start
+# Restart Nginx using service command (not systemctl)
+sudo service nginx restart
