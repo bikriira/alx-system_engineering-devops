@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # comment
 
 if [ $# -gt 3 ]; then
