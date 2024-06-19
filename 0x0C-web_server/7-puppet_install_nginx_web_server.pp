@@ -26,10 +26,9 @@ file {'/var/www/html/error_pages/404.html':
 }
 
 # Make /redirect_me is redirect to another page(and clean default host configuration).
-exec {'configure nginix default':
-command => "echo '\
+$config = "\
 server {
-    listen 80 default_server;
+  listen 80 default_server;
     listen [::]:80 default_server;
 
     root /var/www/html;
@@ -50,9 +49,13 @@ server {
         root /var/www/html/error_pages/;
         internal;
     }
-}' | sudo tee /etc/nginx/sites-available/default >/dev/null",
-path    => ['/usr/bin', '/bin', '/usr/sbin', '/sbin'],
-notify  => Service['nginx']
+}"
+file {'/etc/nginx/sites-available/default':
+  ensure  => 'present',
+  mode    => '0644',
+  content => $config,
+  require => Package['nginx'],
+  notify  => Service['nginx'],
 }
 
 # Start Nginx 
@@ -60,4 +63,5 @@ service { 'nginx':
   ensure    => running,   # Ensure the service is running
   enable    => true,      # Enable the service to start on boot
   subscribe => File['/etc/nginx/sites-available/default'],  # Restart when this file changes
+  require   => Package['nginx']
 }
