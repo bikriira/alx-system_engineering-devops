@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# A script to install nginx on a server and set it up to display 'Hello World'
+# at its root when queried with a GET request.
+
+# Update package lists and install nginx
+sudo apt update
+sudo apt install nginx -y
+
+# Allow Nginx HTTP traffic through the firewall
+sudo ufw allow 'Nginx HTTP'
+
+# Change the content of the default page
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html >/dev/null
+
+# Make /redirect_me is redirect to another page(and clean default host configuration).
+echo "\
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name _;
+
+    location /redirect_me/ {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}" | sudo tee /etc/nginx/sites-available/default >/dev/null
+
+# Restart Nginx using service command (not systemctl)
+sudo service nginx restart
