@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# A script to install nginx on a server and set it up to display 'Hello World'
-# at its root when queried with a GET request.
+# A script to Configure your Nginx server to have a custom 404 page
+# that contains the string Ceci n'est pas une page.
 
 # Update package lists and install nginx
 sudo apt update
